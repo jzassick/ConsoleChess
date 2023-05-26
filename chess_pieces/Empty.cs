@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleChess.chess_pieces
 {
-    internal class Pawn : Piece
+    internal class Empty : Piece
     {
-        public Pawn()
+        public Empty()
         {
         }
-        public string printPiece() => "P";
+        public string printPiece()
+        {
+            return " ";
+        }
     }
 }

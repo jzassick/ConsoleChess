@@ -4,7 +4,8 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Lets play chess");
+        Console.WriteLine("Let's play chess");
         GameManager gameManager = new();
+        gameManager.printBoard();
     }
 }
