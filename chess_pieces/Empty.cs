@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleChess
+namespace ConsoleChess.chess_pieces
 {
-    internal class GameManager
+    internal class Empty
     {
-        object[,] gameBoard;
-        public GameManager()
+        public Empty()
         {
-            gameBoard = new object[8, 8];
         }
     }
 }
