@@ -32,7 +32,7 @@ namespace ConsoleChess
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine(Console.BackgroundColor = ConsoleColor.Black);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("1", Console.BackgroundColor = ConsoleColor.Red);
+            Console.Write("8", Console.BackgroundColor = ConsoleColor.Red);
             for (int i = 0;i < 8;i++)
             {
                 for (int j = 0;j < 8; j++)
@@ -42,7 +42,7 @@ namespace ConsoleChess
                         Console.WriteLine(Console.BackgroundColor = ConsoleColor.Black);
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.Write(i+2);
+                        Console.Write(7-i);
                     }
                 }
             }
