@@ -11,9 +11,6 @@ namespace ConsoleChess.chess_pieces
         public Empty()
         {
         }
-        public string printPiece()
-        {
-            return " ";
-        }
+        public string printPiece() => " ";
     }
 }
