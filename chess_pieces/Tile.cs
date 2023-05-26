@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleChess.chess_pieces
 {
-    internal class Empty
+    internal class Tile
     {
-        public Empty()
+        public Tile()
         {
         }
     }
