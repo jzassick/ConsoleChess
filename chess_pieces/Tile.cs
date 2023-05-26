@@ -19,7 +19,7 @@ namespace ConsoleChess.chess_pieces
         {
             if (isWhite)
             {
-                Console.Write(piece.printPiece(),Console.BackgroundColor = ConsoleColor.White, Console.ForegroundColor = ConsoleColor.Black);
+                Console.Write(piece.printPiece(), Console.BackgroundColor = ConsoleColor.White, Console.ForegroundColor = ConsoleColor.Black);
             }
             else
             {
