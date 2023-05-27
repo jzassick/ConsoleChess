@@ -8,7 +8,10 @@ namespace ConsoleChess.chess_pieces
 {
     internal class Tile
     {
+        // stores the tile board color (white or blue)
         private bool isWhite { get; set; }
+
+        // stores the piece on the tile square
         private Piece piece { get; set; }
         public Tile(bool isWhite, Piece piece)
         {

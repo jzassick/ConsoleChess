@@ -10,6 +10,8 @@ namespace ConsoleChess
     internal class GameManager
     {
         private Tile[,] gameBoard { get; }
+
+        // initialize the gameboard for a new game of chess
         public GameManager()
         {
             this.gameBoard = new Tile[8, 8];
@@ -24,6 +26,8 @@ namespace ConsoleChess
                 }
             }
         }
+
+        // prints the current state of the gameboard
         public void printBoard()
         {
             Console.BackgroundColor = ConsoleColor.Red;
