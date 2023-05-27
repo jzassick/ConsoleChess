@@ -18,7 +18,7 @@ namespace ConsoleChess
             {
                 for (int j = 0; j < 8; j++)
                 {
-                    if (j is 0 or 7) { gameBoard[i, j] = new Tile(isWhite, new Pawn()); }
+                    if (j is 1 or 6) { gameBoard[i, j] = new Tile(isWhite, new Pawn()); }
                     else { gameBoard[i, j] = new Tile(isWhite, new Empty()); }
                     if (j < 7) { isWhite = !isWhite; }
                 }
