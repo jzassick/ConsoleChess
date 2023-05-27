@@ -30,6 +30,7 @@ namespace ConsoleChess
         // prints the current state of the gameboard
         public void printBoard()
         {
+            // prints the border and column letters
             Console.BackgroundColor = ConsoleColor.Red;
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write(" abcdefgh");
@@ -42,6 +43,7 @@ namespace ConsoleChess
                 for (int j = 0;j < 8; j++)
                 {
                     gameBoard[i,j].printTile();
+                    // prints the border and row numbers
                     if (j == 7 && i < 7) {
                         Console.WriteLine(Console.BackgroundColor = ConsoleColor.Black);
                         Console.BackgroundColor = ConsoleColor.Red;
@@ -50,6 +52,7 @@ namespace ConsoleChess
                     }
                 }
             }
+            // fixes border coloring
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine(Console.BackgroundColor = ConsoleColor.Black);
             Console.ForegroundColor = ConsoleColor.White;
