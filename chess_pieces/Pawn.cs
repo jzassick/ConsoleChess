@@ -8,9 +8,13 @@ namespace ConsoleChess.chess_pieces
 {
     internal class Pawn : Piece
     {
-        public Pawn()
+        bool isBlack;
+        public Pawn(bool isBlack)
         {
+            this.isBlack = isBlack;
         }
         public string printPiece() => "P";
+
+        public bool pieceIsBlack() => this.isBlack;
     }
 }

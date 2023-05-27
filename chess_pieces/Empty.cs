@@ -12,5 +12,7 @@ namespace ConsoleChess.chess_pieces
         {
         }
         public string printPiece() => " ";
+
+        public bool pieceIsBlack() => true;
     }
 }

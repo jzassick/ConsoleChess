@@ -9,5 +9,7 @@ namespace ConsoleChess.chess_pieces
     internal interface Piece
     {
         string printPiece();
+
+        bool pieceIsBlack();
     }
 }
