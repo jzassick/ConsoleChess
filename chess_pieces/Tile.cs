@@ -33,7 +33,7 @@ namespace ConsoleChess.chess_pieces
                 }
                 else
                 {
-                    Console.Write(piece.printPiece(), Console.BackgroundColor = ConsoleColor.White, Console.ForegroundColor = ConsoleColor.DarkMagenta);
+                    Console.Write(piece.printPiece(), Console.BackgroundColor = ConsoleColor.White, Console.ForegroundColor = ConsoleColor.DarkYellow);
                 }
             }
             else
@@ -44,7 +44,7 @@ namespace ConsoleChess.chess_pieces
                 }
                 else
                 {
-                    Console.Write(piece.printPiece(), Console.BackgroundColor = ConsoleColor.DarkGray, Console.ForegroundColor = ConsoleColor.DarkMagenta);
+                    Console.Write(piece.printPiece(), Console.BackgroundColor = ConsoleColor.DarkGray, Console.ForegroundColor = ConsoleColor.DarkYellow);
                 }
             }
         }

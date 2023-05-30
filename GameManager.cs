@@ -16,7 +16,7 @@ namespace ConsoleChess
         {
             this.gameBoard = new Tile[8, 8];
             bool isWhite = true;
-
+            // generate the empty tiles and pawns
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
@@ -27,7 +27,7 @@ namespace ConsoleChess
                     if (j < 7) { isWhite = !isWhite; }
                 }
             }
-
+            // generate the rooks, knights, bishops, king, and queen
             gameBoard[0, 0].changePiece(new Rook(true));
             gameBoard[7, 0].changePiece(new Rook(true));
             gameBoard[0, 7].changePiece(new Rook(false));
