@@ -16,6 +16,7 @@ namespace ConsoleChess
         {
             this.gameBoard = new Tile[8, 8];
             bool isWhite = true;
+
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
@@ -26,6 +27,23 @@ namespace ConsoleChess
                     if (j < 7) { isWhite = !isWhite; }
                 }
             }
+
+            gameBoard[0, 0].changePiece(new Rook(true));
+            gameBoard[7, 0].changePiece(new Rook(true));
+            gameBoard[0, 7].changePiece(new Rook(false));
+            gameBoard[7, 7].changePiece(new Rook(false));
+            gameBoard[1, 0].changePiece(new Knight(true));
+            gameBoard[6, 0].changePiece(new Knight(true));
+            gameBoard[1, 7].changePiece(new Knight(false));
+            gameBoard[6, 7].changePiece(new Knight(false));
+            gameBoard[2, 0].changePiece(new Bishop(true));
+            gameBoard[5, 0].changePiece(new Bishop(true));
+            gameBoard[2, 7].changePiece(new Bishop(false));
+            gameBoard[5, 7].changePiece(new Bishop(false));
+            gameBoard[3, 0].changePiece(new Queen(true));
+            gameBoard[3, 7].changePiece(new Queen(false));
+            gameBoard[4, 0].changePiece(new King(true));
+            gameBoard[4, 7].changePiece(new King(false));
         }
 
         // prints the current state of the gameboard
@@ -38,7 +56,7 @@ namespace ConsoleChess
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine(Console.BackgroundColor = ConsoleColor.Black);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("8", Console.BackgroundColor = ConsoleColor.Red);
+            Console.Write("1", Console.BackgroundColor = ConsoleColor.Red);
             for (int i = 0;i < 8;i++)
             {
                 for (int j = 0;j < 8; j++)
@@ -46,10 +64,11 @@ namespace ConsoleChess
                     gameBoard[i,j].printTile();
                     // prints the border and row numbers
                     if (j == 7 && i < 7) {
+                        Console.ForegroundColor = ConsoleColor.Black;
                         Console.WriteLine(Console.BackgroundColor = ConsoleColor.Black);
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.Write(7-i);
+                        Console.Write(i+2);
                     }
                 }
             }

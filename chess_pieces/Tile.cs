@@ -18,6 +18,11 @@ namespace ConsoleChess.chess_pieces
             this.TileIsWhite = TileIsWhite;
             this.piece = piece;
         }
+
+        public void changePiece(Piece piece)
+        {
+            this.piece = piece;
+        }
         public void printTile()
         {
             if (TileIsWhite)
