@@ -1,21 +1,32 @@
 ﻿using ConsoleChess.chess_pieces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ConsoleChess
 {
     internal class GameManager
     {
         private Tile[,] gameBoard { get; }
+        private Hashtable letters = new Hashtable();
 
         // initialize the gameboard for a new game of chess
         public GameManager()
         {
             this.gameBoard = new Tile[8, 8];
             bool isWhite = true;
+            letters.Add("a", 0);
+            letters.Add("b", 1);
+            letters.Add("c", 2);
+            letters.Add("d", 3);
+            letters.Add("e", 4);
+            letters.Add("f", 5);
+            letters.Add("g", 6);
+            letters.Add("h", 7);
             // generate the empty tiles and pawns
             for (int i = 0; i < 8; i++)
             {
@@ -76,6 +87,18 @@ namespace ConsoleChess
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine(Console.BackgroundColor = ConsoleColor.Black);
             Console.ForegroundColor = ConsoleColor.White;
+        }
+        // this function processes a move
+        public void processMove(string move)
+        {
+            int firstLet = (int)letters[key: move[..1]];
+            int secondLet = (int)letters[key: move.Substring(3, 1)];
+            int firstNum = Int32.Parse(move.Substring(1, 1))-1;
+            int secondNum = Int32.Parse(move.Substring(4, 1))-1;
+            Piece origin = gameBoard[firstNum, firstLet].getPiece();
+            Piece destination = gameBoard[secondNum, secondLet].getPiece();
+            gameBoard[firstNum,firstLet].changePiece(new Empty());
+            gameBoard[secondNum,secondLet].changePiece(origin);
         }
     }
 }
