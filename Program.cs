@@ -21,11 +21,11 @@ internal class Program
                 Console.WriteLine("Invalid move");
                 continue;
             }
-            else
+            else if (gameManager.processMove(move))
             {
-                gameManager.processMove(move);
                 gameManager.printBoard();
             }
+            else { Console.WriteLine("That is not a valid move. Pick a different move."); }
         }
     }
 }

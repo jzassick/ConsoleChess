@@ -16,5 +16,10 @@ namespace ConsoleChess.chess_pieces
         public string printPiece() => "R";
 
         public bool pieceIsBlack() => this.isBlack;
+
+        public bool isValidMove(int originRow, int originCol, int destRow, int destCol, Tile[,] board)
+        {
+            return true;
+        }
     }
 }

@@ -89,7 +89,7 @@ namespace ConsoleChess
             Console.ForegroundColor = ConsoleColor.White;
         }
         // this function processes a move
-        public void processMove(string move)
+        public bool processMove(string move)
         {
             int firstLet = (int)letters[key: move[..1]];
             int secondLet = (int)letters[key: move.Substring(3, 1)];
@@ -97,8 +97,14 @@ namespace ConsoleChess
             int secondNum = Int32.Parse(move.Substring(4, 1))-1;
             Piece origin = gameBoard[firstNum, firstLet].getPiece();
             Piece destination = gameBoard[secondNum, secondLet].getPiece();
-            gameBoard[firstNum,firstLet].changePiece(new Empty());
-            gameBoard[secondNum,secondLet].changePiece(origin);
+
+            if (origin.isValidMove(firstNum, firstLet, secondNum, secondLet, gameBoard))
+            {
+                gameBoard[firstNum, firstLet].changePiece(new Empty());
+                gameBoard[secondNum, secondLet].changePiece(origin);
+                return true;
+            }
+            return false;
         }
     }
 }

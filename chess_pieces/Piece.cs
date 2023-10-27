@@ -11,5 +11,7 @@ namespace ConsoleChess.chess_pieces
         string printPiece();
 
         bool pieceIsBlack();
+
+        bool isValidMove(int originRow, int originCol, int destRow, int destCol, Tile[,] board);
     }
 }
